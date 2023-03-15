@@ -26,6 +26,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./flights-table.component.css']
 })
 export class TopnavComponent {
-  displayedColumns: string[] = ['Flight Number', 'Origin', 'Destination', 'Departure Time', 'Arrival Time', 'Seats Available', 'Seat Cost'];
+displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 }
