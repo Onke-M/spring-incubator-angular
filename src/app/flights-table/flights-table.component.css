@@ -1,3 +1,70 @@
-table {
+button {
+  background-color: cornflowerblue;
+ /* size: 100px;*/
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid grey;
+  cursor: pointer;
+  padding: 20px;
+}
+/*.mat-mdc-table .mat-mdc-header-cell{*/
+/*  background: lightgray;*/
+/*}*/
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: cornflowerblue;
+
+}
+
+#tableStock{
+  width:100%;
+  padding:1em;
+  margin-left:0.5em;
+}
+.mat-table{
+  overflow-y: scroll;
+}
+mat-header-row{
+  background-color: azure;
+
+}
+.table-container {
+  height: 650px;
   width: 100%;
+  overflow: auto;
+
+}
+
+.defaults{
+  display: flex;
+  flex-direction: row;
+
+  /*justify-content: flex-start;*/
+}
+.quote{
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.condition{
+  padding-left: 50px;
+
+}
+
+.searchBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.search{
+  width: 750px;
+  padding-left: 0.5em;
+}
+
+.mat-card{
+  margin-bottom: 10px;
+  margin-top: 10px;
 }

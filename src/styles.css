@@ -1,4 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+body{
+  background-color: cornflowerblue;
+  overflow-y: hidden;
+}
+code {
+  color: #e01a76;
+}
 
+.chartContainer canvas {
+  max-height: 250px;
+  width: auto;
+}
+
+.chartContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.green {
+  color: white ;
+  --mdc-snackbar-container-color: black !important;
+
+}
+.custom-style{
+  --mdc-snackbar-container-color: #1861ac !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+/* @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"; */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
