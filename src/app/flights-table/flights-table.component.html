@@ -45,7 +45,6 @@
       <th mat-header-cell *matHeaderCellDef> DepartureTime </th>
       <td mat-cell *matCellDef="let row">
         {{row.departureTime}}
-        <span style="color: #d32f2f;" *ngIf="row.stock.availableQty == 0">*</span>
       </td>
     </ng-container>
 
@@ -62,6 +61,13 @@
     <ng-container matColumnDef="SeatCost">
       <th mat-header-cell *matHeaderCellDef> SeatCost </th>
       <td mat-cell *matCellDef="let row">{{row.seatCost}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Book">
+      <th mat-header-cell *matHeaderCellDef>  </th>
+      <td mat-cell *matCellDef="let row; index as rowIndex">
+        <button mat-button>Book Flight</button>
+      </td>
     </ng-container>
 
   </table>

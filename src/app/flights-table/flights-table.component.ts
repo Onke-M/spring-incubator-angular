@@ -25,20 +25,24 @@ export class TopnavComponent {
   search!: string;
 
   onKey(event: any) { // without type info
-    this.getTopSellers(event.target.value); // returns
+    this.getFlights(); // returns
   }
 
   flights: any = []
   isLoading = false;
 
-  displayedColumns: string[] = ['FlightNumber', 'Origin', 'Destination', 'DepartureTime', 'ArrivalTime', 'SeatsAvailable', 'SeatCost'];
+  displayedColumns: string[] = ['FlightNumber', 'Origin', 'Destination', 'DepartureTime', 'ArrivalTime', 'SeatsAvailable', 'SeatCost', 'Book'];
   dataSource = new MatTableDataSource<Flight>()
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  async getTopSellers(search: string){
+  async ngOnInit() {
+    this.getFlights()
+  }
+
+  async getFlights(){
     this.isLoading = true;
-    this.flights = await this.bookingService.getFlights
+    this.flights = await this.bookingService.getFlights()
     this.dataSource.data = this.flights;
     this.isLoading = false;
   }

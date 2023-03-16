@@ -7,9 +7,11 @@ import { lastValueFrom } from 'rxjs';
 })
 export class BookingService {
   flights: any;
-  flightsURL = "https://localhost:8202/api/flights"
+  flightsURL = "http://localhost:8202/flights"
 
   constructor(private httpClient: HttpClient) { }
+
+
 
   async getFlights(){
     const endPointToHit = this.flightsURL
