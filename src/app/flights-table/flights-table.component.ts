@@ -40,6 +40,10 @@ export class TopnavComponent {
     this.getFlights()
   }
 
+  async createBooking(row:any){
+    await this.bookingService.createBooking(row.id)
+  }
+
   async getFlights(){
     this.isLoading = true;
     this.flights = await this.bookingService.getFlights()

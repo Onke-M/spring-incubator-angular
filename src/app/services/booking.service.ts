@@ -7,7 +7,9 @@ import { lastValueFrom } from 'rxjs';
 })
 export class BookingService {
   flights: any;
+  booking:any;
   flightsURL = "http://localhost:8202/flights"
+  bookingURL = "http://localhost:8201/bookings"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,4 +23,16 @@ export class BookingService {
       this.flights = results;
       return this.flights;
     }
+
+    async createBooking(flightID:number){
+    const endPointToHit = this.bookingURL
+      let httpCall = this.httpClient.post<any>(
+        `${endPointToHit}/?customerID=${1}&flightID=${flightID}`,
+        null
+      );
+      let results = await lastValueFrom(httpCall);
+  
+        this.booking = results;
+        return this.booking;
+      }
 }
