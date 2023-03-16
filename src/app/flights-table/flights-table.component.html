@@ -60,7 +60,7 @@
 
     <ng-container matColumnDef="SeatCost">
       <th mat-header-cell *matHeaderCellDef> SeatCost </th>
-      <td mat-cell *matCellDef="let row">{{row.seatCost}}</td>
+      <td mat-cell *matCellDef="let row">{{row.seatCost | currency:'ZAR':"symbol-narrow"}}</td>
     </ng-container>
 
     <ng-container matColumnDef="Book">
