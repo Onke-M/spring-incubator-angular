@@ -1,27 +1,35 @@
-# SpringIncubatorAngular
+✈️ Online Flight Booking System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+A full-featured microservice-based backend for an online flight booking platform. It allows users to search and book flights, receive notifications (via SMS), and earn loyalty points. The system includes user authentication, role-based access control, and integration with messaging and external services.
 
-## Development server
+🔧 Features
+🧑‍💻 User Side
+- Flight Search: Find available flights by origin, destination, and date.
+- Booking: Book flights and receive booking confirmation.
+- Notifications: Receive booking confirmations via SMS (ActiveMQ-based system).
+- Loyalty System: Earn loyalty points per booking via integration with a SOAP-based external service.
+- User Authentication: Register, login, and access booking history.
+- User Roles: Standard users and admins with different access levels.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🛠️ Admin Side
+- Flight Management: Create, update, or delete flights (CRUD).
+- View Bookings: Monitor all user bookings.
+- Manage Users: Admin access to user information.
 
-## Code scaffolding
+💻 Technologies Used
+🔸 Backend — Spring Boot
+- Spring Boot — Core framework for rapid backend development.
+- Spring MVC — RESTful APIs for client communication.
+- Spring Security — User authentication, password encryption, and role-based access control.
+- Spring Data JPA — ORM for interacting with relational databases.
+- Hibernate — JPA provider.
+- Apache ActiveMQ — Messaging broker for sending booking notifications via SMS.
+- External SMS API — For sending SMS notifications (plugged into message consumers).
+- SOAP Client (JAX-WS / Spring Web Services) — For consuming the external loyalty points service.
+- JWT (JSON Web Tokens) — Secure, stateless user session handling.
+- Lombok — Reduces boilerplate code.
+- Maven — Dependency management and build tool.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🧰 Additional Tools
+- Git — Version control.
+- IntelliJ IDEA — Recommended IDE for Spring Boot development.
